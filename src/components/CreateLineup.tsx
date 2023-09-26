@@ -74,10 +74,11 @@ function CreateLineup({}: Props) {
 
   return (
     <div>
-      <div className='relative grid gap-2 w-full '>
+      <div className='relative grid gap-2 w-full border-2 rounded-xl bg-foreground/10 p-2'>
+        <h1 className='text-2xl font-semibold'>Create new lineup {'🔥'}</h1>
         <Input value={mapName} onChange={e=>setMapName(e.target.value)} placeholder='Map Name'/>
         <Input value={siteName} onChange={e=>setSiteName(e.target.value)} placeholder='Site Name'/>
-        {allImages.length}
+        uploaded {allImages.length} files
         <UploadImages allImages={allImages} setAllImages={setAllImages} />
         <Button onClick={()=>createLineup()} isLoading={isLoading} disabled={isLoading}>Create Lineup</Button>
 

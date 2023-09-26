@@ -44,15 +44,15 @@ const Lineups = (props: Props) => {
         <div className="flex flex-col border-2 rounded-xl p-2" key={lineup.id}>
           <div className="flex items-center gap-2 justify-between">
             <div className="flex flex-col gap-2">
-              <h1 className="text-2xl font-semibold">Map{"->"}{lineup.mapName}</h1>
-              <h1 className="text-2xl font-semibold">site{"->"}{lineup.siteName}</h1>
+              <h1 className="text-2xl font-semibold">{'🌎'}Map{"->"}{lineup.mapName}</h1>
+              <h1 className="text-2xl font-semibold">{'💣'}site{"->"}{lineup.siteName}</h1>
             </div>
             <DeleteLineUp id={lineup.id} />
           </div>
           <div className="flex flex-col gap-2 rounded-xl p-2">
           {
             lineup.images.map((img) => (
-              <Image src={img} className="rounded-xl w-full h-full object-cover bg-cover" alt="line up" width={1000} height={1000} />
+              <Image key={parseInt(img)} src={img} className="rounded-xl w-full h-full object-cover bg-cover" alt="line up" width={1000} height={1000} />
             ))
           }
           </div>
