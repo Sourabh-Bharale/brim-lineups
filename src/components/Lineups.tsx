@@ -47,7 +47,7 @@ const Lineups = (props: Props) => {
               <h1 className="text-2xl font-semibold">{'🌎'}Map{"->"}{lineup.mapName}</h1>
               <h1 className="text-2xl font-semibold">{'💣'}site{"->"}{lineup.siteName}</h1>
             </div>
-            <DeleteLineUp id={lineup.id} />
+            {/* <DeleteLineUp id={lineup.id} /> */}
           </div>
           <div className="flex flex-col gap-2 rounded-xl p-2">
           {

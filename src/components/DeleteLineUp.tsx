@@ -50,6 +50,7 @@ const DeleteLineUp = ({id}: Props) => {
     })
 
   return (
+    
     <Button variant={'destructive'} onClick={()=>deleteLineup()} isLoading={isLoading}>
     <Trash2Icon className="w-5 h-5 rounded-md" />
     </Button>
