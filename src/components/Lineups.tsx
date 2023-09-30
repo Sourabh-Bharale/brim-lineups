@@ -18,7 +18,8 @@ const Lineups = (props: Props) => {
   const selectedSite = searchParams.get('site') || 'a'
   const { data: lineups } = useQuery({
     queryKey: ['lineup', selectedMap, selectedSite],
-    refetchOnMount: true,
+    notifyOnChangeProps:['data'],
+    refetchInterval:2000,
     queryFn: async () => {
       const { data } = await axios.get<DrizzleLineups[]>('/api/lineups?map=' + selectedMap + '&site=' + selectedSite)
       return data

@@ -27,12 +27,11 @@ function CreateLineup({}: Props) {
         mapName,
         siteName,
       }
-
       const {data} = await axios.post<LineupRequest>('/api/create',payload)
       return data
     },
     onSuccess:async ()=>{
-      queryClient.invalidateQueries(['lineup'])
+      queryClient.invalidateQueries({queryKey:['lineup']})
       setMapName('')
       setSiteName('')
       setAllImages([])
